@@ -2,14 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   transition: 0.3s;
-}
-/*  */ /*  */
-.Container {
-  padding: 5px;
-  border: 3px solid rgb(204, 204, 204);
-  width: 100%;
 }
 /*  */ /*  */
 /*  */ /*  */
@@ -125,6 +120,149 @@
   border: 2px solid rgb(2, 184, 184);
   box-shadow: 0 0 7px aqua;
 }
+/*  */ /*  */
+.AnimatedBtnPurple {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  color: black;
+  position: relative;
+  overflow: hidden;
+  transition: 0.7s;
+  box-shadow: 0 0 5px blue;
+}
+.AnimatedBtnPurple:hover {
+  color: white;
+  box-shadow: 0 0 7px blueviolet;
+}
+.AnimatedBtnPurple::before {
+  width: 100%;
+  height: 0%;
+  background-color: rgb(182, 8, 182);
+  position: absolute;
+  left: 0;
+  content: "";
+  z-index: -1;
+  transition: 0.7s;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 0 50% 50%;
+}
+.AnimatedBtnPurple:hover::before {
+  top: 0;
+  height: 200%;
+}
+/*  */ /*  */
+.AnimatedBtnPurple2 {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  color: black;
+  position: relative;
+  overflow: hidden;
+  transition: 0.7s;
+  box-shadow: 0 0 5px blue;
+}
+.AnimatedBtnPurple2:hover {
+  color: white;
+  box-shadow: 0 0 7px blueviolet;
+}
+.AnimatedBtnPurple2::before {
+  width: 100%;
+  height: 0%;
+  background-color: rgb(182, 8, 182);
+  position: absolute;
+  left: 0;
+  content: "";
+  z-index: -1;
+  transition: 0.7s;
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+.AnimatedBtnPurple2:hover::before {
+  bottom: 0;
+  height: 200%;
+}
+/*  */ /*  */
+.AnimatedBtnBlue {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  color: black;
+  position: relative;
+  overflow: hidden;
+  transition: 0.7s;
+  box-shadow: 0 0 5px blue;
+}
+.AnimatedBtnBlue:hover {
+  color: white;
+  box-shadow: 0 0 7px blueviolet;
+}
+.AnimatedBtnBlue::before {
+  width: 100%;
+  height: 0%;
+  background-color: rgb(32, 32, 255);
+  position: absolute;
+  left: 0;
+  content: "";
+  z-index: -1;
+  transition: 0.7s;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 0 50% 50%;
+}
+.AnimatedBtnBlue:hover::before {
+  top: 0;
+  height: 200%;
+}
+/*  */ /*  */
+.AnimatedBtnBlue2 {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  color: black;
+  position: relative;
+  overflow: hidden;
+  transition: 0.7s;
+  box-shadow: 0 0 5px blue;
+}
+.AnimatedBtnBlue2:hover {
+  color: white;
+  box-shadow: 0 0 7px blueviolet;
+}
+.AnimatedBtnBlue2::before {
+  width: 100%;
+  height: 0%;
+  background-color: rgb(32, 32, 255);
+  position: absolute;
+  left: 0;
+  content: "";
+  z-index: -1;
+  transition: 0.7s;
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+.AnimatedBtnBlue2:hover::before {
+  bottom: 0;
+  height: 200%;
+}
+/*  */ /*  */
 /*  */ /*  */
 /*  */ /*  */
 .Input {
@@ -343,12 +481,48 @@
   transform: scale(1);
 }
 /*  */ /*  */
-
 /*  */ /*  */
-/*  */ /*  */
-/*  */ /*  */
-@media screen and (max-width: 700px) {
-  .Container {
-    border: 1px solid rgb(204, 204, 204);
-  }
+.Switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 35px;
 }
+.Switch span {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(190, 188, 188);
+  transition: 0.4s;
+  border-radius: 34px;
+  border: 1px solid  blueviolet;
+  box-shadow: 0 0 5px purple;
+}
+.Switch input {
+  display: none;
+}
+.Switch span::before{
+  position: absolute;
+  content: '';
+  height: 25px;
+  width: 35px;
+  left: 5px;
+  top: 4px;
+  bottom: 5px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 300px;
+}
+.Switch input:checked ~ span{
+  background-color: #ff278c;
+  border:1px solid  #ff278c ;
+}
+.Switch input:checked ~ span::before{
+  transform: translateX(32px);
+}
+/*  */ /*  */
+/*  */ /*  */
+/*  */ /*  */
