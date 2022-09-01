@@ -8,7 +8,7 @@
 /*  */ /*  */
 .Container {
   padding: 5px;
-  border: 5px solid rgb(204, 204, 204);
+  border: 3px solid rgb(204, 204, 204);
   width: 100%;
 }
 /*  */ /*  */
@@ -167,8 +167,8 @@
 /*  */ /*  */
 /*  */ /*  */
 .Radio-group {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .Radio {
   font-size: 18px;
@@ -178,8 +178,8 @@ flex-direction: column;
   position: relative;
   cursor: pointer;
   margin: 7px;
+  letter-spacing: 1px;
 }
-
 .Radio input[type="radio"] {
   display: none;
 }
@@ -213,12 +213,142 @@ flex-direction: column;
 .Radio input[type="radio"]:checked ~ span:after {
   transform: translate(-50%, -50%) scale(1);
 }
+/*  */ /*  */
+/*  */ /*  */
+.RadioPurple {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  padding: 5px;
+}
+.RadioPurple .RadioItem [type="radio"] {
+  display: none;
+}
+.RadioPurple .RadioItem {
+  margin-left: 15px;
+}
+.RadioPurple .RadioItem + .RadioItem {
+  margin-top: 15px;
+}
+.RadioPurple .RadioItem label {
+  display: block;
+  padding: 15px 20px 15px 45px;
+  background-color: rgb(146, 62, 224);
+  border: 2px solid purple;
+  color: white;
+  font-size: 17px;
+  box-shadow: 0 0 5px purple;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  transition: 0.4s ease-in-out 0s;
+}
+.RadioPurple .RadioItem label::after,
+.RadioPurple .RadioItem label::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.RadioPurple .RadioItem label::after {
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  left: 11px;
+  top: 13px;
+}
+.RadioPurple .RadioItem label::before {
+  background-color: rgb(245, 245, 245);
+  height: 12px;
+  width: 12px;
+  left: 17px;
+  top: 19px;
+  transform: scale(3);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease-in-out 0s;
+}
+.RadioPurple .RadioItem [type="radio"]:checked ~ label {
+  border-color: rgb(105, 7, 105);
+  box-shadow: 0 0 10px rgb(132, 0, 255);
+}
+.RadioPurple .RadioItem [type="radio"]:checked ~ label::before {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+/*  */ /*  */
+.RadioWhite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  padding: 5px;
+}
+.RadioWhite .RadioItem [type="radio"] {
+  display: none;
+}
+.RadioWhite .RadioItem {
+  margin-left: 15px;
+}
+.RadioWhite .RadioItem + .RadioItem {
+  margin-top: 15px;
+}
+.RadioWhite .RadioItem label {
+  display: block;
+  padding: 15px 20px 15px 45px;
+  background-color: white;
+  border: 2px solid rgb(209, 209, 209);
+  color: black;
+  font-size: 17px;
+  box-shadow: 0 0 5px rgb(192, 192, 192);
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 5px;
+  transition: 0.4s ease-in-out 0s;
+}
+.RadioWhite .RadioItem label::after,
+.RadioWhite .RadioItem label::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.RadioWhite .RadioItem label::after {
+  width: 20px;
+  height: 20px;
+  border: 2px solid purple;
+  left: 11px;
+  top: 13px;
+}
+.RadioWhite .RadioItem label::before {
+  background-color: blueviolet;
+  height: 12px;
+  width: 12px;
+  left: 17px;
+  top: 19px;
+  transform: scale(3);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s ease-in-out 0s;
+}
+.RadioWhite .RadioItem [type="radio"]:checked ~ label {
+  border-color: blueviolet;
+  box-shadow: 0 0 10px rgb(165, 165, 165);
+}
+.RadioWhite .RadioItem [type="radio"]:checked ~ label::before {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+/*  */ /*  */
 
 /*  */ /*  */
 /*  */ /*  */
 /*  */ /*  */
 @media screen and (max-width: 700px) {
   .Container {
-    border: 3px solid rgb(204, 204, 204);
+    border: 1px solid rgb(204, 204, 204);
   }
 }
