@@ -263,6 +263,42 @@
 }
 /*  */ /*  */
 /*  */ /*  */
+.AnimatedInput {
+  position: relative;
+  width: max-content;
+  transition: 0.5s;
+}
+.AnimatedInput input {
+  padding:  12px;
+  border: 1px solid blueviolet;
+  border-radius: 3px;
+  outline: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 7px rgb(119, 117, 117);
+}
+.AnimatedInput span {
+  position: absolute;
+  left: 10px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  pointer-events: none;
+  padding: 12px;
+  top: 2px;
+  color: rgb(115, 115, 115);
+}
+.AnimatedInput input:valid ~ span,
+.AnimatedInput input:focus ~ span {
+  color: blueviolet;
+  transform: translateX(5px) translateY(-10px);
+  font-size: 13px;
+  background-color: white;
+  padding: 0 7px;
+  border-left: 1px solid purple;
+  border-right: 1px solid purple;
+}
 /*  */ /*  */
 .Input {
   padding: 9px 11px;
