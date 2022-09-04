@@ -14,11 +14,11 @@
     </style>
   </head>
   <body style="padding: 15px">
-    <h1>Hello Dear, I am Arif Billah.</h1>
+    <h1 style="font-weight: 200;">Hello Dear, I am Arif Billah.</h1>
     <br />
-    <a href="./Style.css">My CSS...</a><br />
+    <p href="./Style.css" style="color: rgb(199, 47, 47);">My CSS CDN:- <span style="margin-left: 10px; color: blue; letter-spacing: 1px; font-weight: bold;" class="span"></span></p><br />
     <br />
-    <a href="https://facebook.com/arifbillah64" target="_blank">Contact Me?</a
+    <a href="https://facebook.com/arifbillah64" target="_blank">Contact Me</a
     ><br />
     <br />
     <hr />
@@ -54,5 +54,12 @@
       <li>.Checkbox</li>
       <li>.Select</li>
     </div>
+    <script>
+      const span = document.querySelector('span');
+      span.textContent = `<link
+      rel="stylesheet"
+      href="https://styling-by-arifbillah.netlify.app/Style.css"
+    />`
+    </script>
   </body>
 </html>
