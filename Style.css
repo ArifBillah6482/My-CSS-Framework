@@ -121,145 +121,179 @@
 }
 /*  */ /*  */
 .AnimatedBtnPurple {
+  display: block;
+  border: 1px solid purple;
+  background: white;
+  outline: none;
+  z-index: 0;
   padding: 10px 20px;
   font-size: 18px;
-  background: none;
-  border: none;
   cursor: pointer;
   letter-spacing: 1px;
   border-radius: 5px;
   color: black;
   position: relative;
   overflow: hidden;
-  transition: 0.7s;
-  box-shadow: 0 0 5px blue;
+  transition: all 0.2s;
+  box-shadow: 0 0 5px blueviolet;
 }
 .AnimatedBtnPurple:hover {
   color: white;
   box-shadow: 0 0 7px blueviolet;
 }
-.AnimatedBtnPurple::before {
-  width: 100%;
-  height: 0%;
-  background-color: rgb(182, 8, 182);
+.AnimatedBtnPurple::after {
   position: absolute;
-  left: 0;
   content: "";
-  z-index: -1;
-  transition: 0.7s;
   top: 0;
-  bottom: 0;
-  border-radius: 0 0 50% 50%;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  background-color: rgb(182, 8, 182);
+  border-radius: 0px 0px 50% 50%;
+  color: white;
+  z-index: 0;
+  transition: all 0.7s;
 }
-.AnimatedBtnPurple:hover::before {
-  top: 0;
+.AnimatedBtnPurple:hover::after {
   height: 200%;
+  z-index: 0;
+  color: white;
+}
+.AnimatedBtnPurple span {
+  position: relative;
+  z-index: 1;
 }
 /*  */ /*  */
 .AnimatedBtnPurple2 {
+  display: block;
+  border: 1px solid purple;
+  background: white;
+  outline: none;
+  z-index: 0;
   padding: 10px 20px;
   font-size: 18px;
-  background: none;
-  border: none;
   cursor: pointer;
   letter-spacing: 1px;
   border-radius: 5px;
   color: black;
   position: relative;
   overflow: hidden;
-  transition: 0.7s;
-  box-shadow: 0 0 5px blue;
+  transition: 0.2s;
+  box-shadow: 0 0 5px blueviolet;
 }
 .AnimatedBtnPurple2:hover {
   color: white;
   box-shadow: 0 0 7px blueviolet;
 }
-.AnimatedBtnPurple2::before {
-  width: 100%;
-  height: 0%;
-  background-color: rgb(182, 8, 182);
+.AnimatedBtnPurple2::after {
   position: absolute;
-  left: 0;
   content: "";
-  z-index: -1;
-  transition: 0.7s;
   bottom: 0;
-  border-radius: 50% 50% 0 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  background-color: rgb(182, 8, 182);
+  border-radius: 50% 50% 0px 0px;
+  color: white;
+  z-index: 0;
+  transition: all 0.7s;
 }
-.AnimatedBtnPurple2:hover::before {
-  bottom: 0;
+.AnimatedBtnPurple2:hover::after {
   height: 200%;
+  z-index: 0;
+  color: white;
+}
+.AnimatedBtnPurple2 span {
+  position: relative;
+  z-index: 1;
 }
 /*  */ /*  */
 .AnimatedBtnBlue {
+  display: block;
+  border: 1px solid blue;
+  background: white;
+  outline: none;
+  z-index: 0;
   padding: 10px 20px;
   font-size: 18px;
-  background: none;
-  border: none;
   cursor: pointer;
   letter-spacing: 1px;
   border-radius: 5px;
   color: black;
   position: relative;
   overflow: hidden;
-  transition: 0.7s;
+  transition: 0.2s;
   box-shadow: 0 0 5px blue;
 }
 .AnimatedBtnBlue:hover {
   color: white;
-  box-shadow: 0 0 7px blueviolet;
+  box-shadow: 0 0 7px blue;
 }
-.AnimatedBtnBlue::before {
-  width: 100%;
-  height: 0%;
-  background-color: rgb(32, 32, 255);
+.AnimatedBtnBlue::after {
   position: absolute;
-  left: 0;
   content: "";
-  z-index: -1;
-  transition: 0.7s;
   top: 0;
-  bottom: 0;
-  border-radius: 0 0 50% 50%;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  background-color: rgb(32, 32, 255);
+  border-radius: 0px 0px 50% 50%;
+  color: white;
+  z-index: 0;
+  transition: all 0.7s;
 }
-.AnimatedBtnBlue:hover::before {
-  top: 0;
+.AnimatedBtnBlue:hover::after {
   height: 200%;
+  z-index: 0;
+  color: white;
+}
+.AnimatedBtnBlue span {
+  position: relative;
+  z-index: 1;
 }
 /*  */ /*  */
 .AnimatedBtnBlue2 {
+  display: block;
+  border: 1px solid blue;
+  background: white;
+  outline: none;
+  z-index: 0;
   padding: 10px 20px;
   font-size: 18px;
-  background: none;
-  border: none;
   cursor: pointer;
   letter-spacing: 1px;
   border-radius: 5px;
   color: black;
   position: relative;
   overflow: hidden;
-  transition: 0.7s;
+  transition: 0.2s;
   box-shadow: 0 0 5px blue;
 }
 .AnimatedBtnBlue2:hover {
   color: white;
-  box-shadow: 0 0 7px blueviolet;
+  box-shadow: 0 0 7px blue;
 }
-.AnimatedBtnBlue2::before {
-  width: 100%;
-  height: 0%;
-  background-color: rgb(32, 32, 255);
+.AnimatedBtnBlue2::after {
   position: absolute;
-  left: 0;
   content: "";
-  z-index: -1;
-  transition: 0.7s;
   bottom: 0;
-  border-radius: 50% 50% 0 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  background-color: rgb(32, 32, 255);
+  border-radius: 50% 50% 0px 0px;
+  color: white;
+  z-index: 0;
+  transition: all 0.7s;
 }
-.AnimatedBtnBlue2:hover::before {
-  bottom: 0;
+.AnimatedBtnBlue2:hover::after {
   height: 200%;
+  z-index: 0;
+  color: white;
+}
+.AnimatedBtnBlue2 span {
+  position: relative;
+  z-index: 1;
 }
 /*  */ /*  */
 /*  */ /*  */
@@ -752,7 +786,7 @@
   background-color: white;
   color: black;
 }
-.Select select option{
+.Select select option {
   background-color: white;
   color: black;
 }
